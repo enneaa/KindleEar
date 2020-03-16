@@ -73,7 +73,7 @@ def getOpts(output_type='kindle', book_mode='periodical'):
     setattr(opts, "pretty_print", False)
     setattr(opts, "prefer_author_sort", True)
     setattr(opts, "share_not_sync", False)
-    setattr(opts, "mobi_file_type", 'both' if book_mode == 'comic' else 'old') #mobi_file_type='old' | 'both'
+    setattr(opts, "mobi_file_type", 'both') #mobi_file_type='old' | 'both'
     setattr(opts, "dont_compress", True)
     setattr(opts, "no_inline_toc", True)
     setattr(opts, "toc_title", "Table of Contents")
@@ -123,7 +123,7 @@ def getOpts(output_type='kindle', book_mode='periodical'):
     return opts
     
 def setMetaData(oeb, title='Feeds', lang='zh-cn', date=None, creator='KindleEar',
-    pubtype='periodical:magazine:KindleEar'): #pubtype='periodical:magazine:KindleEar' | 'book:book:KindleEar'
+    pubtype='book:book:KindleEar'): #pubtype='periodical:magazine:KindleEar' | 'book:book:KindleEar'
     oeb.metadata.add('language', lang if lang else 'zh-cn')
     oeb.metadata.add('creator', creator)
     oeb.metadata.add('title', title)
